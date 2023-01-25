@@ -22,7 +22,7 @@
     <div id="profileForm" required>
 <div class="mb-3">
   <label for="formGroupExampleInput" class="form-label">Username</label>
-  <input type="text" class="form-control" id="formGroupExampleInput" name="profilename">
+  <input type="text" class="form-control" id="formGroupExampleInput" name="name">
 </div>
 <div class="mb-3">
   <label for="exampleFormControlInput1" class="form-label">Email address</label>
@@ -34,9 +34,9 @@
 </div>
 <div class="mb-3">
   <label for="exampleFormControlTextarea1" class="form-label">About me</label>
-  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"  name="about" ></textarea>
 </div>
-<button id="profileSubmit" type="button" class="btn btn-info" href="main.ejs" name="about" onclick="myFunction()">Create Profile</button>
+<button id="profileSubmit" type="button" class="btn btn-info" href="main.ejs" onclick="myFunction()">Create Profile</button>
     </div>
     <!-- table1: name, email, hometown, about me, user ID
 table2: user ID, textString, name, favorites, (if we have time: image upload)
