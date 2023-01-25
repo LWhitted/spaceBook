@@ -1,6 +1,3 @@
-
-const sequelize = require('sequelize')
-const sequelize = new Sequelize('postgres://spacebook_user:ir6kwf7pelzKwZxFvWE9Pa24jCKGpIQI@dpg-cf87rq6n6mplr41b2et0-a/spacebook')
 const express = require('express')
 const app = express()
 const port = 3000
@@ -28,10 +25,6 @@ const { Posts } = require('./models');
 
 // ];
 
-let Posts = [ {
-  username: "Knsong",
-  userText: "I had a good day"
-}]
 
 let Favorites = []
 
@@ -44,7 +37,7 @@ app.get('/posts', (req, res) => {
 })
 
 
-app.post('/add-post', async (req, res) => {
+app.post('/add-about', async (req, res) => {
   // req.body contains an Object with firstName, lastName, email
  const { name, email, hometown, about } = req.body;
  const newUser = await Posts.create({
@@ -60,9 +53,9 @@ app.post('/add-post', async (req, res) => {
   })
 })
 
-app.post('/add-about', async (req, res) => {
+app.post('/add-post', async (req, res) => {
    // req.body contains an Object with firstName, lastName, email
-  const { username, post, favorite } = req.body;
+  const { username, post, favorites } = req.body;
   const newUser = await Users.create({
       username,
       post,
@@ -87,4 +80,3 @@ app.get('/list-posts', (req, res) => {
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })
-
