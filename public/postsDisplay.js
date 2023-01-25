@@ -20,7 +20,7 @@ async function getInfo() {
             <p>${user[i].userText}</p>
           
             <a class="container">
-                  <input type="submit" id="favoriteBtn" value= "&#9829;">
+                  <input type="submit" id="favoriteBtn" value= "&#9829;" name="favorites">
              </a>
 </div>
         `
