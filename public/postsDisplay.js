@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", getInfo);
 
 
 async function getInfo() {
-    const response = await fetch('http://localhost:3000/list-posts');
+    const response = await fetch('/list-posts');
     const user = await response.json();
     console.log(user, "posts")
 

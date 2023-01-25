@@ -13,7 +13,7 @@ const handleSubmit = async (e) => {
     const data = new FormData(e.target);
     const stringified = stringifyFormData(data);
     console.log(stringified);
-    const response = await fetch('http://localhost:3000/add-post', {
+    const response = await fetch('/add-post', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',

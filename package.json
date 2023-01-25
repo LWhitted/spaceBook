@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start":"sequelize db:migrate && node server.js",
     "db:create": "createdb spaceBook",
     "db:destroy": "dropdb spaceBook",
     "db:init": "psql -f schema.sql spaceBook",

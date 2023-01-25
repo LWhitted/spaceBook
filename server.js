@@ -1,3 +1,7 @@
+
+const Sequelize = require('sequelize')
+const Sequelize = new Sequelize('postgres://spacebook_user:ir6kwf7pelzKwZxFvWE9Pa24jCKGpIQI@dpg-cf87rq6n6mplr41b2et0-a/spacebook')
+
 const express = require('express')
 const app = express()
 const port = 3000
@@ -13,7 +17,7 @@ app.set('view engine', 'ejs');
 app.use(express.json());
 app.use(express.static( __dirname + '/public'));
 
-const Sequelize = require('sequelize');
+
 const { Users } = require('./models');
 const { Posts } = require('./models');
 
