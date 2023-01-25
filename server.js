@@ -1,6 +1,6 @@
 
 const Sequelize = require('sequelize')
-const Sequelize = new Sequelize('postgres://spacebook_user:ir6kwf7pelzKwZxFvWE9Pa24jCKGpIQI@dpg-cf87rq6n6mplr41b2et0-a/spacebook')
+const sequelize = new Sequelize('postgres://spacebook_user:ir6kwf7pelzKwZxFvWE9Pa24jCKGpIQI@dpg-cf87rq6n6mplr41b2et0-a/spacebook')
 
 const express = require('express')
 const app = express()
@@ -30,7 +30,7 @@ const { Posts } = require('./models');
 // ];
 
 
-let Favorites = []
+// let Favorites = []
 
 app.get('/', (req, res) => {
   res.render('profile.ejs');

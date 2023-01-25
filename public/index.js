@@ -3,7 +3,7 @@
 
 function stringifyFormData(fd) {
     const data = {
-        name: fd.get('profilename'),
+        name: fd.get('name'),
         email: fd.get('email'),
         hometown: fd.get('hometown'),
         about: fd.get('about'),
@@ -34,7 +34,7 @@ const handleSubmit = async (e) => {
         });
 };
 
-const form = document.getElementById('profileForm');
+const form = document.getElementById('profilePage');
 form.addEventListener("submit", handleSubmit)
 
 //redirect to posts from profile page function
@@ -44,7 +44,7 @@ function searchKeyPress(e) {
   e = e || window.event;
   if (e.keyCode === 13)
   {
-      document.getElementById('profileForm').submit();
+      document.getElementById('profilePage').submit();
       return false;
   }
   return true;
