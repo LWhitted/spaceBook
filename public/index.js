@@ -17,7 +17,7 @@ const handleSubmit = async (e) => {
     const data = new FormData(e.target);
     const stringified = stringifyFormData(data);
     console.log(stringified);
-    const response = await fetch('http://localhost:3000/add-about', {
+    const response = await fetch('/add-about', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -57,7 +57,7 @@ function redirect() {
   //look for search id
   var item = document.getElementById("profileSubmit").value;
   //redirect page
-  window.location.href = "http://localhost:3000/posts";
+  window.location.href = "/posts";
 
 }
 
