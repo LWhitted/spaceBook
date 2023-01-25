@@ -21,3 +21,5 @@ module.exports = (sequelize, DataTypes) => {
   });
   return Favorites;
 };
+
+//add username and post

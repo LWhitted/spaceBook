@@ -14,10 +14,10 @@
     "dialect": "postgres"
   },
   "production": {
-    "username": "postgres",
-    "password": "password",
-    "database": "spaceBook",
-    "host": "127.0.0.1",
+    "username": "spacebook_user",
+    "password": "ir6kwf7pelzKwZxFvWE9Pa24jCKGpIQI",
+    "database": "spacebook",
+    "host": "dpg-cf87rq6n6mplr41b2et0-a",
     "dialect": "postgres"
   }
 }
