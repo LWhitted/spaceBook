@@ -13,13 +13,17 @@ app.set('view engine', 'ejs');
 app.use(express.json());
 app.use(express.static( __dirname + '/public'));
 
-let Users = [ 
-  { name:'Kristina',
-email: 'bob@gmail.com',
-hometown: 'Chicago',
-about: 'I like Supernatural'}
+const Sequelize = require('sequelize');
+const { Users } = require('./models');
+const { Posts } = require('./models');
 
-];
+// let Users = [ 
+//   { name:'Kristina',
+// email: 'bob@gmail.com',
+// hometown: 'Chicago',
+// about: 'I like Supernatural'}
+
+// ];
 
 let Posts = [ {
   username: "Knsong",
@@ -36,26 +40,36 @@ app.get('/posts', (req, res) => {
  res.render('main.ejs')
 })
 
-app.get('/favorites', (req, res) => {
-  res.render('favorites.ejs')
- })
 
- app.post('/add-about', (req, res) => {
-  console.log(req.body);
-  Users.push(req.body);
-  res.send({
-    message: 'About added!',
-    user: req.body
+app.post('/add-post', async (req, res) => {
+  // req.body contains an Object with firstName, lastName, email
+ const { name, email, hometown, about } = req.body;
+ const newUser = await Posts.create({
+     name,
+     email,
+     hometown, 
+     about
+ });
+ 
+ // Send back the new user's ID in the response:
+  res.json({
+      id: newUser.id
   })
 })
 
-app.post('/add-post', (req, res) => {
-  console.log(req.body);
-  Posts.push(req.body);
-  res.send({
-    message: 'New Post added!',
-    user: req.body
-  })
+app.post('/add-about', async (req, res) => {
+   // req.body contains an Object with firstName, lastName, email
+  const { username, post, favorite } = req.body;
+  const newUser = await Users.create({
+      username,
+      post,
+      favorites
+  });
+  
+  // Send back the new user's ID in the response:
+  res.json({
+      id: newUser.id
+})
 })
 
 

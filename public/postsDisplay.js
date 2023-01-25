@@ -17,10 +17,10 @@ async function getInfo() {
         htmlString += `
 <div class="contactCard">
             <p>${user[i].username}</p>
-            <p>${user[i].userText}</p>
+            <p>${user[i].post}</p>
           
             <a class="container">
-                  <input type="submit" id="favoriteBtn" value= "&#9829;">
+                  <input type="submit" id="favoriteBtn" value="&#9829;">
              </a>
 </div>
         `
