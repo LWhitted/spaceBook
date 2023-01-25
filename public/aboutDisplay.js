@@ -14,16 +14,12 @@ async function getInfo() {
 
     for (let i = 0; i < user.length; i++) {
         htmlString += `
-<div class="contactCard">
+    <div class="contactCard">
             <p>${user[i].name}</p>
             <p>${user[i].email}</p>
             <p>${user[i].hometown}</p>
             <p>${user[i].about}</p>
-            
-
-      
-
-</div>
+    </div>
         `
     }
 
