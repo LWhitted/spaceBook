@@ -1,3 +1,4 @@
+console.log("in deletePosts js")
 
 const handleDelete = async (e) => {
     console.log("I made it here")
@@ -20,9 +21,7 @@ const handleDelete = async (e) => {
             });
 };
 
-document.addEventListener("click", handleDelete)
 
-    
 
 
 // function handleAlert () {
