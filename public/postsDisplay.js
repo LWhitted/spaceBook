@@ -1,7 +1,6 @@
 
 //Posts for Thoughts 
 
-
 document.addEventListener("DOMContentLoaded", getInfo);
 
 
@@ -15,18 +14,24 @@ async function getInfo() {
 
     for (let i = 0; i < user.length; i++) {
         htmlString += `
-<div class="contactCard">
-            <p>${user[i].username}</p>
+<div class="usersPost">
+            
             <p>${user[i].post}</p>
           
             <a class="container">
                   <input type="submit" id="favoriteBtn" value="&#9829;">
+                 <button onclick="handleDelete(event)" class="remove-post" id=${user[i].id} > Delete Button </button>
              </a>
-</div>
+</div> 
+
+
         `
     }
 
     document.getElementById("savedPosts").innerHTML = htmlString;
+
+console.log("getInfo")
+
 }
 
 
