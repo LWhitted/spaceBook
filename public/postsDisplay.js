@@ -15,9 +15,8 @@ async function getInfo() {
     for (let i = 0; i < user.length; i++) {
         htmlString += `
 <div class="usersPost">
-            
+
             <p>${user[i].post}</p>
-          
             <a class="container">
                   <input type="submit" id="favoriteBtn" value="&#9829;">
                  <button onclick="handleDelete(event)" class="remove-post" id=${user[i].id} > Delete Button </button>

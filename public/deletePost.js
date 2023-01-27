@@ -1,5 +1,4 @@
 
-
 const handleDelete = async (e) => {
     console.log("I made it here")
     e.preventDefault();
@@ -14,14 +13,14 @@ const handleDelete = async (e) => {
             .then((response) => response.json())
             .then((data) => {
                 console.log('Success:', data);
-                // location.reload();
+                setTimeout(function(){window.location.reload();},10)
             })
             .catch((error) => {
                 console.error('Error:', error);
             });
 };
 
-
+document.addEventListener("click", handleDelete)
 
     
 

@@ -13,7 +13,7 @@ function stringifyFormData(fd) {
 
 
 const handSubmit1 = async (e) => {
-    e.preventDefault();
+    // e.preventDefault();
     const data = new FormData(e.target);
     const stringified = stringifyFormData(data);
     console.log(stringified);
@@ -27,7 +27,7 @@ const handSubmit1 = async (e) => {
         .then((response) => response.json())
         .then((data) => {
             console.log('Success:', data);
-            // window.location.href = "http://localhost:3000/posts";
+            setTimeout(function(){window.location.reload();},10)
         })
         .catch((error) => {
             console.error('Error:', error);
@@ -43,28 +43,28 @@ form.addEventListener("submit", handSubmit1)
 
 //redirect to posts from profile page function
 
-form.addEventListener('click', searchKeyPress)
+// form.addEventListener('click', searchKeyPress)
 
-function searchKeyPress(e) {
-  e = e || window.event;
-  if (e.keyCode === 13)
-  {
-      document.getElementById('submitBtn').submit();
-      return false;
-  }
-  return true;
-}
+// function searchKeyPress(e) {
+//   e = e || window.event;
+//   if (e.keyCode === 13)
+//   {
+//       document.getElementById('submitBtn').submit();
+//       return false;
+//   }
+//   return true;
+// }
 
-form.addEventListener('submit', redirect)
+// form.addEventListener('submit', redirect)
 
 
-function redirect() {
-  //look for search id
-  let item = document.getElementById("submitBtn").value;
-  //redirect page
-  window.location.href = "http://localhost:3000/posts";
+// function redirect() {
+//   //look for search id
+//   let item = document.getElementById("submitBtn").value;
+//   //redirect page
+//   window.location.href = "http://localhost:3000/posts";
 
-}
+// }
 
 
 
