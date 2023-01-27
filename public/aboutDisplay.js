@@ -1,13 +1,11 @@
 
-
-
 document.addEventListener("DOMContentLoaded", getInfo);
 
 
 async function getInfo() {
     const response = await fetch('/list-users');
     const user = await response.json();
-    console.log(user)
+    console.log(user, "user info fetched")
 
 
     let htmlString = '';
@@ -23,6 +21,7 @@ async function getInfo() {
         `
     }
 
-    document.getElementById("profileForm").innerHTML = htmlString;
+    document.getElementById("profileDisplayed").innerHTML = htmlString;
 }
+
 

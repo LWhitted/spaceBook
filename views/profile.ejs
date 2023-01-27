@@ -19,31 +19,34 @@
         <h1>Make your profile</h1>
     </div>
 
-    <div id="profileForm" required>
+    <form id="profileForm" name= "profileForm" required>
 <div class="mb-3">
   <label for="formGroupExampleInput" class="form-label">Name</label>
-  <input type="text" class="form-control" id="formGroupExampleInput" name="name">
+  <input type="text" class="form-control" id="formGroupExampleInput" name="name" required>
 </div>
 <div class="mb-3">
   <label for="exampleFormControlInput1" class="form-label">Email address</label>
-  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" name="email">
+  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" name="email" required>
 </div>
 <div class="mb-3">
   <label for="formGroupExampleInput2" class="form-label">Hometown</label>
-  <input type="text" class="form-control" id="formGroupExampleInput2" name="hometown">
+  <input type="text" class="form-control" id="formGroupExampleInput2" name="hometown" required>
 </div>
 <div class="mb-3">
   <label for="exampleFormControlTextarea1" class="form-label">About me</label>
-  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"  name="about" ></textarea>
+  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"  name="about" required></textarea>
 </div>
-<button id="profileSubmit" type="button" class="btn btn-info" onclick="myFunction()">Create Profile</button>
-    </div>
+<a class="container" >
+  <input type="submit" id="submitBtn" name="submitBtn" value="Create Profile" required >
+</a>
+</form>
     <!-- table1: name, email, hometown, about me, user ID
 table2: user ID, textString, name, favorites, (if we have time: image upload)
 table 3: user ID, favorites -->
 </div>
-<script src="/index.js"></script>
-<script src="/aboutDisplay.js"></script>
+
+<script  src="../index.js"></script>
+<script  src="../aboutDisplay.js"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
         integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
