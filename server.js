@@ -15,7 +15,7 @@ app.use(express.static( __dirname + '/public'));
 
 
 const Sequelize = require('sequelize')
-const sequelize = new Sequelize('postgres://spacebook_user:ir6kwf7pelzKwZxFvWE9Pa24jCKGpIQI@dpg-cf87rq6n6mplr41b2et0-a/spacebook')
+const sequelize = new Sequelize('postgres://spacebook_mfcg_user:mhTHro46yZYlr7bZc86UC5Hk1pWcAmRS@dpg-cf9i6tkgqg47p3vb1cmg-a/spacebook_mfcg')
 
 
 
