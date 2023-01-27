@@ -23,14 +23,6 @@ const handleDelete = async (e) => {
 
 
 
-
-// const dltBtn = document.getElementsByClassName("remove-post")
-// console.log(dltBtn, "adding eventlisteners to buttons")
-// for(let i = 0; i < dltBtn.length; i++){
-//     console.log("hi");
-//     dltBtn[i].addEventListener("click", () => {
-//     console.log("clicikc")}
-// )}
     
 
 
