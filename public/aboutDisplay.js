@@ -21,7 +21,7 @@ async function getInfo() {
         `
     }
 
-    document.getElementById("profileDisplayed").innerHTML = htmlString;
+    document.getElementById("profileDisplay").innerHTML = htmlString;
 }
 
 
