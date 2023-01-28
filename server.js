@@ -30,6 +30,10 @@ app.get('/posts', (req, res) => {
  res.render('main.ejs')
 })
 
+app.get('/about', (req, res) => {
+  res.render('about.ejs')
+ })
+
 
 app.post('/add-about', async (req, res) => {
   // req.body contains an Object with firstName, lastName, email
@@ -49,10 +53,11 @@ app.post('/add-about', async (req, res) => {
 
 app.post('/add-post', async (req, res) => {
    // req.body contains an Object with firstName, lastName, email
-  const { post, favorites } = req.body;
+  const { post, favorites, createdAt } = req.body;
   const newPost = await Posts.create({
       post,
-      favorites
+      favorites,
+      createdAt 
   });
   
   // Send back the new user's ID in the response:
@@ -81,8 +86,9 @@ app.get('/list-users', async (req, res) => {
 });
 
 app.get('/list-posts', async (req, res) => {
+  
   const posts = await Posts.findAll({
-      attributes: ['id','post', 'favorites']
+      attributes: ['id','post', 'favorites', 'createdAt']
   });
   res.json(posts);
 });

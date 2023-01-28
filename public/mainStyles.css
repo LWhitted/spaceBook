@@ -4,6 +4,7 @@ body {
     margin: auto;
     height: 1000px;
     width: 1328px;
+    margin-bottom: 100px;
 }
 
 #postPage {
@@ -17,6 +18,7 @@ body {
 
 #profileDisplay{
     margin-top: 5%;
+    text-align: center;
 
 }
 #postTitle{
@@ -25,10 +27,52 @@ body {
 }
 #postForm{
     margin-top: 5%;
+    text-align: center;
+    
 }
 
-#savedPosts{
+#profile {
     margin-top: 10%;
+    text-align: center;
+    border-style: solid;
+    border-width: 5px;
+    border-color: #B0E0E6;
+    border-radius: 15px;
+    background-color: aliceblue;
+    color: black;
+    padding-bottom: 10px;
+    padding-top: 20px;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    margin-left: 30%;
+}
+
+
+
+.usersPost{
+    margin-top: 10%;
+    text-align: center;
+    border-style: solid;
+    border-width: 5px;
+    border-color: #B0E0E6;
+    border-radius: 15px;
+    background-color: aliceblue;
+    color: black;
+    padding-bottom: 10px;
+    padding-top: 20px;
+}
+
+#favoriteBtn {
+    background-color: #B0E0E6;
+    margin-right: 10px;
+}
+.remove-post {
+    background-color: #B0E0E6;
+}
+
+#submitPost {
+    background-color:cadetblue; 
 }
 
 .usersPost {
@@ -39,6 +83,9 @@ body {
     margin-left: 20%;
     margin-right: 20%;
 }
+
+
+
 
 
 .sidenav {
@@ -52,3 +99,18 @@ body {
     overflow-x: hidden; /* Disable horizontal scroll */
     padding-top: 20px;
   }
+  
+  /* The navigation menu links */
+  .sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  

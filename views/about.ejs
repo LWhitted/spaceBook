@@ -18,40 +18,14 @@
         <a href="/about">Profile</a>
     </div>
     
- <div id="postPage">
 
-    <div id="postTitle">
-        <h1>Create a Post</h1>
-    </div>
 
-  
+ <div id="profile">
 
     <div id="profileDisplay">
-      <p id="profileName"></p>
 
             <!-- this is where the profile form populates once the profile is submitted -->
     </div>
-
-  
-
-    <form id="postForm" required>
-        
-
-        <div class="mb-3">
-            <label for="exampleFormControlTextarea1" class="form-label">Write your thoughts here!</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="post" required></textarea>
-        </div>
-        <button id="submitPost" type="submit" class="btn btn-info" required>Submit Post</button>
-        </form>
-
-    <div id="savedPosts">
-        <!-- this is where the saved posts will be populated -->
-    </div>
-
-    <!-- table1: name, email, hometown, about me, user ID
-    table2: user ID, textString, name, favorites, (if we have time: image upload)
-    table 3: user ID, favorites -->
-
 </div>
 
 </div>
@@ -63,9 +37,8 @@
         integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
         crossorigin="anonymous"></script>
 
-    <script src="/jokes.js"></script>
+
     <script defer src="../posts.js"></script>
-    <script defer src="../postsDisplay.js"></script>
-    <script src="/deletePost.js"></script>
+    <script src="../aboutDisplay.js"></script>
 </body>
 </html>

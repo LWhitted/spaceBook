@@ -1,27 +1,18 @@
-
 document.addEventListener("DOMContentLoaded", getInfo);
 
 
-async function getInfo() {
+async function getInfo(e) {
     const response = await fetch('/list-users');
     const user = await response.json();
-    console.log(user, "user info fetched")
+    const about = user[0]
+    console.log(about.name, "user info fetched")
 
-
-    let htmlString = '';
-
-    for (let i = 0; i < user.length; i++) {
-        htmlString += `
-    <div class="contactCard">
-            <p>${user[i].name}</p>
-            <p>${user[i].email}</p>
-            <p>${user[i].hometown}</p>
-            <p>${user[i].about}</p>
+           document.getElementById("profileDisplay").innerHTML = `
+    <div class="contactCard" >
+            <p>${about.name}</p>
+            <p>${about.email}</p>
+            <p>${about.hometown}</p>
+            <p>${about.about}</p>
     </div>
         `
     }
-
-    document.getElementById("profileDisplay").innerHTML = htmlString;
-}
-
-
