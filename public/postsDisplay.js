@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", getInfo);
 async function getInfo() {
     const response = await fetch('/list-posts');
     const user = await response.json();
-  
+    console.log(user[0].createdAt, "posts")
 
     
 
@@ -22,7 +22,7 @@ async function getInfo() {
                   <input type="submit" id="favoriteBtn" value="&#9829;">
                  <button onclick="handleDelete(event), myConfirm(event)" class="remove-post" id=${user[i].id} > Delete </button>
              </a>
-             <div id="timestamp" >${user[i].createdAt}</div>
+             <div id="timestamp" >${Date(user[i].createdAt)}</div>
 </div> 
 
 
@@ -34,4 +34,14 @@ async function getInfo() {
 console.log("getInfo")
 
 }
+
+// const event = new Date(1993, 6, 28, 14, 39, 7);
+
+// console.log(event.toString());
+// // Expected output: "Wed Jul 28 1993 14:39:07 GMT+0200 (CEST)"
+// // Note: your timezone may vary
+
+// console.log(event.toDateString());
+// // Expected output: "Wed Jul 28 1993"
+
 

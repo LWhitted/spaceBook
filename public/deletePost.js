@@ -1,3 +1,4 @@
+
 console.log("in deletePosts js")
 
 const handleDelete = async (e) => {
@@ -32,6 +33,7 @@ const handleDelete = async (e) => {
 // }
 
 
+
 function myConfirm() {
 
   
@@ -42,5 +44,6 @@ function myConfirm() {
     
   }
 }
+
 
 
