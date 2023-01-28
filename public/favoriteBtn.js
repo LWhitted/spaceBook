@@ -5,8 +5,8 @@ const addFavorites = async (e) => {
     console.log("I made it here")
     e.preventDefault();
     console.log(e.target.id);
-    const response = await fetch(`/list-posts/${e.target.id}`, {
-        method: 'ADD',
+    const response = await fetch(`/list-posts//${e.target.id}`, {
+        method: 'POST',
         headers: {
             'Content-Type': 'application/json',
         },
