@@ -62,7 +62,7 @@ app.post('/add-favorites', async (req, res) => {
     favorites
    })
    res.json({
-    id: addFavorites.id
+    id: addFavorite.id
    })
 })
 app.post('/add-post', async (req, res) => {
@@ -103,6 +103,14 @@ app.get('/list-posts', async (req, res) => {
   
   const posts = await Posts.findAll({
       attributes: ['id','post', 'favorites', 'createdAt']
+  });
+  res.json(posts);
+});
+
+app.get('/list-favorites', async (req, res) => {
+  
+  const posts = await Favorites.findAll({
+      attributes: ['faovrites']
   });
   res.json(posts);
 });

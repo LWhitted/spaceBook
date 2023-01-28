@@ -19,7 +19,7 @@ async function getInfo() {
 
             <p>${user[i].post}</p>
             <a class="buttons">
-                  <input type="submit" id="favoriteBtn" value="&#9829;">
+                  <input onclick="addFavorites(event)" type="submit" id="${user[i].id}"id="favoriteBtn" value="&#9829;">
                  <button onclick="handleDelete(event), myConfirm(event)" class="remove-post" id=${user[i].id} > Delete </button>
              </a>
              <div id="timestamp" >${Date(user[i].createdAt)}</div>
