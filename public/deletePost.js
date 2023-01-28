@@ -32,15 +32,15 @@ const handleDelete = async (e) => {
 // }
 
 
-// function myConfirm() {
+function myConfirm() {
 
   
-//     var result = confirm("Want to delete?");
-//     if (result==true) {
-//      return true;
-//     } else {
-//      return false;
-//     }
-//   }
+    var result = confirm("Want to delete?");
+    if (result==true) {
+    handleDelete()
+  } else {
+    
+  }
+}
 
-// document.addEventListener("click", myConfirm)
+

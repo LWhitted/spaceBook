@@ -2,7 +2,8 @@
 function stringifyFormData(fd) {
     const data = {
         post: fd.get('post'),
-        favorites: fd.get('favorites')
+        favorites: fd.get('favorites'),
+        createdAt: fd.get('createdAt')
     };
     return JSON.stringify(data);
 }
