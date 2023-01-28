@@ -36,7 +36,6 @@ const handleDelete = async (e) => {
 
 function myConfirm() {
 
-  
     var result = confirm("Want to delete?");
     if (result==true) {
     handleDelete()
