@@ -62,7 +62,7 @@ app.post('/add-favorites', async (req, res) => {
     favorites
    })
    res.json({
-    id: addFavorites.id
+    id: addFavorite.id
    })
 })
 app.post('/add-post', async (req, res) => {
