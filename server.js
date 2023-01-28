@@ -21,6 +21,7 @@ const sequelize = new Sequelize('postgres://spacebook_mfcg_user:mhTHro46yZYlr7bZ
 
 const { Users} = require('./models');
 const { Posts} = require('./models');
+const { Favorites} = require('./models');
 
 app.get('/', (req, res) => {
   res.render('profile.ejs');
@@ -32,6 +33,10 @@ app.get('/posts', (req, res) => {
 
 app.get('/about', (req, res) => {
   res.render('about.ejs')
+ })
+
+ app.get('/favorites', (req, res) => {
+  res.render('favorites.ejs')
  })
 
 
@@ -50,7 +55,16 @@ app.post('/add-about', async (req, res) => {
       id: newUser.id
   })
 })
-
+app.post('/add-favorites', async (req, res) => {
+   //req.body contains an Object with firstName, lastName, email
+   const {favorites} = req.body;
+   const addFavorite = await Favorites.create({
+    favorites
+   })
+   res.json({
+    id: addFavorites.id
+   })
+})
 app.post('/add-post', async (req, res) => {
    // req.body contains an Object with firstName, lastName, email
   const { post, favorites, createdAt } = req.body;
