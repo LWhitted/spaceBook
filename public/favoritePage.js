@@ -4,8 +4,7 @@ console.log("in favorites page")
 document.addEventListener("DOMContentLoaded", addFavorites);
 
 
-async function addFavorites(e) {
-    e.preventDefault();
+async function addFavorites() {
     const response = await fetch(`/list-posts`);
     const user = await response.json();
 
@@ -23,5 +22,8 @@ for (let i = 0; i < user.length; i++) {
 
 document.getElementById("favoritesList").innerHTML = htmlString;
 
-console.log("addFavorites")
+
+console.log("favorites displayed")
 }
+
+

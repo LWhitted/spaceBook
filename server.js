@@ -55,16 +55,17 @@ app.post('/add-about', async (req, res) => {
       id: newUser.id
   })
 })
-app.post('/add-favorites', async (req, res) => {
-   //req.body contains an Object with firstName, lastName, email
-   const {favorites} = req.body;
-   const addFavorite = await Favorites.create({
-    favorites
-   })
-   res.json({
-    id: addFavorite.id
-   })
-})
+app.post('/add-favorites/:id', async (req, res) => {
+     //req.body contains an Object with firstName, lastName, email
+     const {favorites} = req.body;
+     const addFavorite = await Favorites.create({
+      favorites
+     })
+     res.json({
+      id: addFavorite.id
+     })
+});
+ 
 app.post('/add-post', async (req, res) => {
    // req.body contains an Object with firstName, lastName, email
   const { post, favorites, createdAt } = req.body;
@@ -110,7 +111,7 @@ app.get('/list-posts', async (req, res) => {
 app.get('/list-favorites', async (req, res) => {
   
   const posts = await Favorites.findAll({
-      attributes: ['faovrites']
+      attributes: ['id','faovrites']
   });
   res.json(posts);
 });
